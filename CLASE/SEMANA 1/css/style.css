@@ -1,0 +1,11 @@
+.contenedor {
+	width:900px;
+	border:1px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 250px;
+	font-family: helvetica;
+
+}
