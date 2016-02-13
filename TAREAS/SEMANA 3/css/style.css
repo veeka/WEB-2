@@ -1,0 +1,134 @@
+body {
+  background: #dce1df;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+div.buttons {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: #586660;
+  display: inline-block;
+  font-family: arial;
+  font-size: 12px;
+  margin: 4px 2px;
+  padding: 6px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+a:hover {
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 8px #acacac;
+  color: #6f827a;
+  -webkit-transform: translate3d(0, -4px, 0);
+          transform: translate3d(0, -4px, 0);
+}
+
+body.orange {
+  background: #9e0d0d;
+}
+body.orange a {
+  color: #582d00;
+}
+body.orange a:hover {
+  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px #6d0b0b;
+  color: #6d0b0b;
+}
+body.blue {
+  background: #e2711b;
+}
+body.blue a {
+ 
+  color: #004449;
+}
+body.blue a:hover {
+  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px #c15911;
+  color: #c15911;
+}
+body.green {
+  background: #ddc40e;
+}
+body.green a {
+  
+  color: #77680c; 
+}
+body.green a:hover {
+  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px #9b860d;
+  color: #9b860d;
+}
+body.white {
+  background: #51af14;
+}
+body.white a {
+ 
+  color: #009141;
+}
+body.white a:hover {
+  border: 0px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px #3f8910;
+  color: #3f8910;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.volver {
+ font-family: helvetica;
+
+ font-weight: lighter;
+ box-shadow: 0px;
+ border: 0px; 
+ height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+.volver a:hover {
+  color: white;
+  border: 0px;
+  box-shadow: 0px;
+}
+
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23px;
+    height: 59px
+
+    }
+   
