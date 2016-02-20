@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/css">
+.center {
+margin: 0 auto;
+}
+</script>
+
+</head>
+	<meta charset="UTF-8">
+	<title>Ejemplo imagen y sonido</title>
+
+<style>
+body {
+	background-color: #000;
+	color: white;
+	font-family: helvetica;
+	font-weight: lighter;
+}
+h1 {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.effects li a {
+
+	display: block;
+	width: 31px;
+	height: 29px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background: url(images/puppy.svg);
+	text-indent: -9999px;
+}
+
+.center { 
+	margin: 0 auto; width: 400px; 
+}
+
+p {
+	text-align: center;
+}
+
+
+</style>
+
+
+<body>
+
+	<h1 style="font-weight: lighter;">ESTA ES LA HISTORIA DE MI PERRITO</h1>
+
+<p style="font-weight: lighter;">Rin Tin Tin, el pastor alemán más famoso. Esta es la historia de un perro que <br> llegó al mundo en medio de una guerra, pero supo ganarse la admiración y el <br> amor de todos gracias a su valor y gran corazón. Sin duda alguna, Rin Tin Tin <br> es el perro pastor alemán más famoso de todos los tiempos, y su historia <br> merece ser contada. </p>
+
+
+<h2 style="font-size: 10px; text-align:center; font-weight: lighter; text-decoration: underline;">PUEDES VER EL VIDEO PARA CONOCER DE SU HISTORIA</h2>
+
+<div class="center">
+
+  <video class="center" src="download/puppy.mp4" 
+			poster="images/puppy.jpg" 
+			width="400" height="300" 
+			preload
+			controls
+			loop>
+Your browser does not support the video tag.
+</video>
+
+<p> A raíz de que en la guerra hay muchos sonidos extraños, el ha adquirido un sentido auditivo excelente</p>
+
+<h3 style="font-size: 15px; text-align:center; font-weight: lighter;">Éstos son los sonidos que mas le gustan:</h3>
+
+				<ul class="effects">
+				<li><a href="#current" onclick="clicksound1.playclip()">Efecto 1</a></li>
+				<li><a href="#current" onclick="clicksound2.playclip()">Efecto 2</a></li>
+				<li><a href="#current" onclick="clicksound3.playclip()">Efecto 3</a></li>
+				<li><a href="#current" onclick="clicksound4.playclip()">Efecto 4</a></li>
+				</ul> 
+
+				<!-- /.effects -->
+
+
+	<script>
+		var html5_audiotypes = { //define la lista de las extensiones de los sonidos. 
+			"mp3": "audio/mpeg",
+			"mp4": "audio/mp4",
+			"ogg": "audio/ogg",
+			"wav": "audio/wav"
+		}
+
+		function createsound(sound){
+			var html5audio = document.createElement('audio')
+
+			if (html5audio.canPlayType){ //chequear soporte HTML5
+				for (var i=0; i<arguments.length; i++){
+					var source = document.createElement('source')
+					source.setAttribute('src', arguments[i])
+					if (arguments[i].match(/\.(\w+)$/i))
+						source.setAttribute('type', html5_audiotypes[RegExp.$1])
+					html5audio.appendChild(source)
+				}
+				html5audio.load()
+				html5audio.playclip = function(){
+					html5audio.pause()
+					html5audio.currentTime=0
+					html5audio.play()
+				}
+				return html5audio
+			}
+			else {
+				return { 
+					playclip:function(){
+						throw new Error("Tu navegador no soporta HTML5 Audio!")
+					}
+				}
+			}
+		}
+
+		//Iniciar los sonidos:
+
+		var clicksound1=createsound("download/Applause.ogg", "download/Applause.mp3")
+		var clicksound2=createsound("download/Bike.ogg", "download/Bike.mp3")
+		var clicksound3=createsound("download/Fireworks.ogg", "download/Fireworks.mp3")
+		var clicksound4=createsound("download/Glass.ogg", "download/Glass.wav")
+
+		</script>	
+</body>
+</html>

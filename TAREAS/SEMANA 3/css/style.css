@@ -1,5 +1,5 @@
 body {
-  background: #dce1df;
+  background: #f4eae9;
   -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
@@ -89,6 +89,8 @@ h1 {
 
 h2 {
   text-align: center;
+  font-family: 'Slabo 27px', serif;
+  letter-spacing: 2px;
 }
 
 h3 {
