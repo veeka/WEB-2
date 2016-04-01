@@ -1,0 +1,279 @@
+body{
+	background: #faf9f9;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a:focus{
+	color: #fff!important;
+	text-decoration: none!important;
+}
+
+.container{
+	max-width: 1130px;
+}
+
+
+/*		Home section 		*/
+
+.hero{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 700px;
+	background: url('../img/bg.jpg') no-repeat fixed center center;	
+	background-size: cover;
+	vertical-align: center;
+}
+
+.hero .caption{
+	position: absolute;
+	max-width: 550px;
+	margin-left: 80px;
+	top: 50%;
+	transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-moz-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+}
+
+.hero .caption h1{
+	color: #f8d8c1;
+	font-size: 34px;
+	font-weight: bold;
+	word-break: break-word;
+}
+
+.hero .caption p{
+	color: #6d6c6c;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 15px 0 35px 0;
+}
+
+#slider .caption p{
+	margin: 0;
+}
+
+a.app_store_btn{
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px 40px;
+	border: 2px solid #f8d8c1;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin: 20px 20px 10px 0;
+	width: 250px;
+
+	color: #f8d8c1;
+	font-size: 16px;
+}
+
+
+.android_icon, .iphone_icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-bottom: 3px;
+}
+
+
+.iphone_icon{
+	background: url('../img/iphone_app.png') no-repeat;
+}
+
+.android_icon{
+	background: url('../img/android_app.png') no-repeat;
+}
+
+
+a.app_store_btn:hover,
+a.app_store_btn:focus{
+	border-color: #9ee3f3;
+	color: #9ee3f3;
+}
+
+
+a.app_store_btn:hover .iphone_icon{
+	background: url('../img/iphone_app_hover.png') no-repeat;
+}
+
+a.app_store_btn:hover .android_icon{
+	background: url('../img/android_app_hover.png') no-repeat;
+}
+
+a.app_link{
+	text-transform: lowercase;
+	letter-spacing: .5px;
+	color: #636363;
+	font-size: 16px;
+}
+
+a.app_link:hover,
+a.app_link:focus{
+	text-decoration: none;
+	color: #41c27d!important;
+}
+
+a.app_store_btn,
+.iphone_icon,
+.android_icon,
+a.app_link{
+	transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
+
+.hero .caption{
+		margin-left: 0;
+	}
+
+	.app_store_btn{
+		display: block;
+		width: 90%;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+
+
+/*		About section 		*/
+
+.about{
+	padding: 100px 0;
+	background: #f8d8c1;
+	text-align: left;
+}
+
+.about .iphone{
+	max-width: 339px;
+	position: relative;
+	display: inline-block;
+
+}
+
+.about .iphone img{
+	width: 100%;
+	height: auto;
+}
+
+.about .features_list{
+	margin-left: 50px;
+}
+
+.about .features_list h1{
+	color: #525151;
+	font-size: 34px;
+	font-weight: bold;
+	line-height: 46px;
+	margin: 0 0 20px 0;
+	word-break: break-word;
+	text-align: left;
+}
+
+.about .features_list p{
+	color: #767272;
+	font-size: 16px;
+	margin-bottom: 45px;
+	line-height: 32px;
+	text-align: left;
+}
+
+.about .features_list ul{
+	margin-bottom: 30px;
+	text-align: right;
+}
+
+.about .features_list ul li{
+	display: block;
+	position: relative;
+	color: #6c6c6c;
+	font-size: 16px;
+	line-height: 44px;
+	text-indent: 25px;
+	text-align: left;
+}
+
+.about .features_list ul li.3{	
+	background-position: 0 15px; 
+}
+
+.about .features_list ul li.2{	
+	background-position: 0 15px; 
+}
+
+.about .features_list ul li.1{	
+	background-position: 0 14px; 
+}
+
+
+.about .features_list ul li span{
+	display: inline-block;
+}
+	.about .features_list {
+		text-align: center;
+		margin: 0;
+	}
+
+	.about .features_list ul li{
+		text-indent: 0;
+		background: transparent!important;
+		margin-bottom: 20px;
+	}
+
+	.about .features_list ul li:last-child{
+		margin: 0;
+	}
+
+	a.app_link{
+		display: block;
+		margin-top: 20px;
+	}
+
+
+/*		Footer 		*/
+
+footer{
+	padding: 100px 0;
+	text-align: center;
+	background: #f8d8c1;
+}
+
+footer .app_platform li{
+	margin: 0 0 0 20px;
+}
+
+footer .app_platform li:first-child{
+	margin: 0;
+}
+
+footer .copyright{
+	margin-top: 30px;
+	color: #757171;
+	font-size: 12px;
+	letter-spacing: .5px;
+}
+
+footer .copyright a{
+	color: #565555;
+}
+
+
+/*		Responsive CSS 		*/
+
+@media (max-width: 360px) {
+	.featured_on li{
+		display: block;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+
+
