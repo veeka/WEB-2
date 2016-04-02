@@ -1,0 +1,142 @@
+body {
+ font-family: 'Montserrat', sans-serif; 
+max-width: 1200px; 
+margin: 60px auto;
+background-color: #fde3cd;
+text-align: center;
+color: #fde3cd;
+} 
+
+.buttons {display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start;}
+
+.buttons * {
+  transition: all .5s ease;
+}
+
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto}
+font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  text-align: middle;
+   font-family: 'Montserrat', sans-serif;
+  color: #560a30;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fde3cd;
+}
+.buttons {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.butFrame {
+  width: 32%;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+.butFrame img {
+  width: 100%;
+  display: block;
+  vertical-align: bottom;
+}
+
+.butFrame .butHeading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  display: block;
+  background: #560a30;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.2em;
+  color: #fde3cd;;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.butFrame .butText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  background: #560a30;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.butFrame .butText p {
+  width: 80%;
+  padding: 0px 0;
+  color: #fde3cd;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.6em;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* HOVER STYLES */
+
+.butFrame:hover .butHeading {
+  bottom: -52px;
+}
+
+.butFrame:hover .butText {
+  opacity: 1;
+}
+
+.butFrame:hover .butText p {
+  padding: 25px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 950px) and (min-width: 701px){
+
+  .butFrame .butText p {
+  font-size: 0.85em;
+  }
+  
+}
+
+@media all and (max-width: 700px) and (min-width: 0px){
+  
+  .butFrame {
+    display:block;
+    width:100%;
+  }
+  
+}
