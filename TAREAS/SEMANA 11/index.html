@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADVINA</title>
+	 <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="css/style.css">  
+		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+
+<div class="all">
+	<img style="width: 90px;" src="img/bola.svg">
+		<h1>adivina, <br>adivinador</h1>
+		    <label for="inputGuess">¿cuál es el número más bonito del 1 al 10?</label>	
+		    <br>
+		    <input type='text' name="inputGuess" id="inputGuess" class="textarea" placeholder="1-10" />
+		    <br>
+		    <button id="submit" class="btn" onclick="aGuess()">¡Adivina!</button>
+
+		<div class='results' id='results'></div>	
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<script>
+				var secretNum = 0;
+var message = '';
+var count = 0;
+
+function generateRandomNum(){
+  secretNum = Math.round(Math.random()*10);
+  count = 0;
+}
+generateRandomNum();
+
+function aGuess(){
+  var num = document.getElementById('inputGuess').value;
+  if (num < secretNum){
+    //Número muy bajito
+    message='Perdiste. <br> El número ' + num + ' es muy bajito. <br> Trata otra vez, con un número más bonito.';
+  } else if (num > secretNum){
+    
+    //Número muy alto
+    message='Perdiste. <br> El número ' + num + ' es muy alto. <br> Trata otra vez, con un número más bonito.';
+  } else if (num == secretNum){
+    //Número correcto
+    message='¡Felicidades, elegiste el número más bonito! El número ganador es el ' + num + '.  '  ;
+  }
+  alertResult(message);
+  count++; 
+}
+
+function alertResult(){
+  console.log(message + ' ' + secretNum);
+  
+  //Mostrar mensaje en HTML
+  var results = document.getElementById('results');
+  results.innerHTML = '<p>' + message + '</p>';
+}
+
+		</script>
+</div>
+
+</body>
+</html>
